@@ -1,0 +1,83 @@
+{
+  "schema": "SPIRAI_STEP4_CANONICAL_REALITY_LEDGER_v1",
+  "step": 4,
+  "name": "SPIRAI — Canonical Reality Ledger (Immutable Turns)",
+  "generated_utc": "<UTC_ISO8601>",
+
+  "constraints": {
+    "append_only": true,
+    "edit": "FORBIDDEN",
+    "delete": "FORBIDDEN",
+    "overwrite": "FORBIDDEN",
+    "reorder": "FORBIDDEN",
+    "identity": "FORBIDDEN",
+    "intent": "FORBIDDEN",
+    "economics": "FORBIDDEN",
+    "authority": "NONE",
+    "execution_power": "NONE"
+  },
+
+  "spirai": {
+    "canonical_definition": "SPIRAI is an immutable continuity memory where truth persists as turns, never as edits.",
+    "turn_model": "Append-as-Turns (No Edit) with explicit lineage",
+    "what_spirai_records": [
+      "irreversible state",
+      "finalized outcome",
+      "legitimate transition"
+    ],
+    "what_spirai_refuses": [
+      "drafts",
+      "intentions",
+      "hypotheses",
+      "intermediate states",
+      "narrative",
+      "identity"
+    ]
+  },
+
+  "ledger": {
+    "ledger_id": "spirai-ledger-v1",
+    "format": "jsonl_turns",
+    "mutation_rule": "APPEND_ONLY",
+    "turns": [
+      {
+        "turn_id": "turn-ZA-EXTRA-KRAJ-2025-12-31T16:58:00Z-FINALIZE",
+        "type": "EVENT_CLOSURE",
+        "event_id": "ZA-EXTRA-KRAJ-paviljon-5-zagreb-HR",
+        "ts_utc": "2025-12-31T16:58:00Z",
+        "state": "FINALIZED",
+        "lineage_ref": null,
+        "validator": "human-governor",
+        "evidence": {
+          "source_id": "pop-ledger.log",
+          "line_verbatim": "2025-12-31T16:58:00Z | EVENT=ZA-EXTRA-KRAJ-paviljon-5-zagreb-HR | ACTION=FINALIZE | CONTEXT=event-concluded-live-field | LINEAGE=FINALIZE Event concluded as live field | VALIDATOR=human-governor"
+        },
+        "notes": [
+          "This is a reality turn (immutable) derived from a finalized record.",
+          "This turn contains no identity and no narrative beyond the verbatim evidence line."
+        ],
+        "turn_hash_sha256": "<SHA256_OF_CANONICAL_TURN_PAYLOAD>"
+      }
+    ]
+  },
+
+  "mmai_dependency": {
+    "required": true,
+    "canonical_files_sha256": {
+      "ANCHOR.json": "d665eba4a1124bbcf5a0c6e6f8cf44cd2e55dab9ab969ae7423caf4c1a76782d",
+      "CANON.md": "1b298116369af5233ba4c080cc1c03bbdac86d4b4daca2812dfd4d0b0db68045",
+      "protocol/12__SPIRAL.md": "4cc4fff2e9874d7ddd03c7566038bb49d2d6c879ba95124ed086926fb35026da"
+    }
+  },
+
+  "step_4_pass_condition": {
+    "requirement": "At least one immutable SPIRAI turn exists (append-only), with explicit event scope, timestamp, and verbatim evidence; no identity; no edits.",
+    "verification": [
+      "Turn object present with event_id + ts_utc + state",
+      "Evidence line embedded verbatim",
+      "No identity / intent / economics fields",
+      "Append-only mutation rule declared",
+      "Canon hash-pinned (including SPIRAL protocol)"
+    ]
+  }
+}
