@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Step 4 — SPIRAI (Canonical Reality Ledger)</title>
+</head>
+<body>
+  <h1>Step 4 — SPIRAI</h1>
+  <p><strong>Name:</strong> Canonical Reality Ledger (Immutable Turns)</p>
+  <p><strong>Generated (UTC):</strong> &lt;UTC_ISO8601&gt;</p>
+
+  <h2>Constraints</h2>
+  <ul>
+    <li><strong>append_only:</strong> true</li>
+    <li><strong>edit/delete/overwrite/reorder:</strong> FORBIDDEN</li>
+    <li><strong>identity/intent/economics:</strong> FORBIDDEN</li>
+    <li><strong>authority/execution_power:</strong> NONE</li>
+  </ul>
+
+  <h2>Canonical definition</h2>
+  <p>SPIRAI is an immutable continuity memory where truth persists as turns, never as edits.</p>
+
+  <h2>Ledger</h2>
+  <p><strong>ledger_id:</strong> spirai-ledger-v1</p>
+  <p><strong>format:</strong> jsonl_turns</p>
+
+  <h3>Turn 1</h3>
+  <pre>
+turn_id:  turn-ZA-EXTRA-KRAJ-2025-12-31T16:58:00Z-FINALIZE
+type:     EVENT_CLOSURE
+event_id:  ZA-EXTRA-KRAJ-paviljon-5-zagreb-HR
+ts_utc:   2025-12-31T16:58:00Z
+state:    FINALIZED
+validator: human-governor
+lineage_ref: null
+turn_hash_sha256: &lt;SHA256_OF_CANONICAL_TURN_PAYLOAD&gt;
+  </pre>
+
+  <h2>Evidence (verbatim)</h2>
+  <pre>
+2025-12-31T16:58:00Z | EVENT=ZA-EXTRA-KRAJ-paviljon-5-zagreb-HR | ACTION=FINALIZE | CONTEXT=event-concluded-live-field | LINEAGE=FINALIZE Event concluded as live field | VALIDATOR=human-governor
+  </pre>
+
+  <h2>Pass condition (Step 4)</h2>
+  <p>
+    Step 4 is satisfied iff at least one immutable SPIRAI turn exists (append-only) with explicit event scope,
+    timestamp, and embedded verbatim evidence, without identity or narrative mutation.
+  </p>
+</body>
+</html>
